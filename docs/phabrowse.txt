@@ -1,0 +1,17 @@
+*phabrose.txt*  fugitive.vim extension for Phabricator
+
+Author:  Chris Peplin <http://christopherpeplin.com>
+License: Same terms as Vim itself (see |license|)
+
+ABOUT                                           *phabrowse-about*
+
+Grab the latest version or report a bug on GitHub:
+
+http://github.com/peplin/vim-phabrowse
+
+CONFIGURATION                                        *phabrowse-configuration*
+
+* a list of Phabricator domains you use >
+  let g:phabrowse_domains = ["https://secure.phabricator.com"]
+
+ vim:tw=78:et:ft=help:norl:

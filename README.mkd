@@ -1,0 +1,43 @@
+# phabrowser.vim
+
+This is a [fugitive.vim](https://github.com/tpope/vim-fugitive) extension for
+Phabricator.
+
+This plugin is based on tpope's
+[vim-rhubarb](https://github.com/tpope/vim-rhubarb) which is a similar plugin to
+enable Github support for `Gbrowse`.
+
+## Known Limitations
+
+Browsing specific commits of a file (besides the most recent in the `master`
+branch) and jumping to a line in the file are not supported.
+
+The particular instance of Phabricator that I built this for uses rebasing, so
+the commit hash on the server is almost always different than your local hash.
+This makes it impossible to browse to a specific revision.
+
+Jumping to lines is also not supported because the URL has to contain both the
+line and the specific commit hash, which for reasons stated earlier is not
+always known.
+
+If someone has an instance of Phabricator that is configured to use merged
+instead of rebasing, I'm happy to accept pull requests that add this
+functionality - I left in the part of the code that could handle it, but it's
+commented out.
+
+## Installation
+
+If you don't have a preferred installation method, I recommend
+installing [vundle](https://github.com/gmarik/vundle) and adding this to your
+`.vimrc`:
+
+    Plugin 'peplin/vim-phabrowse.vim'
+
+and also adding your the Phabricator domains you use to the config:
+
+    let g:phabrowse_domains = ["https://secure.phabricator.com"]
+
+## License
+
+Copyright (c) Chris Peplin.  Distributed under the same terms as Vim itself.
+See `:help license`.

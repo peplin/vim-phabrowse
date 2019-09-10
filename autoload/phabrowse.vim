@@ -16,7 +16,7 @@ function! phabrowse#homepage_for_url(url) abort
     let domain_pattern .= '\|' . escape(split(domain, '://')[-1], '.')
   endfor
 
-  let base = matchstr(a:url, '^\%(https\=://\|git://\|git@\|ssh://code@\)\=\zs\('.domain_pattern.'\)\/diffusion[/:][^/]\{-\}\ze[/:].\{-\}\%(\.git\)\=$')
+  let base = matchstr(a:url, '^\%(https\=://\|git://\|git@\|ssh://code@\|ssh://git@\)\=\zs\('.domain_pattern.'\)\/diffusion[/:][^/]\{-\}\ze[/:].\{-\}\%(\.git\)\=$')
   if !empty(base)
     return 'https://' . tr(base, ':', '/')
   else

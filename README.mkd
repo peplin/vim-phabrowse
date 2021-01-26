@@ -1,4 +1,9 @@
-# phabrowser.vim
+# DEPRECATED: phabrowser.vim
+
+This plugin is no longer maintained, please use
+[vim-phabricator](https://github.com/jparise/vim-phabricator) instead.
+
+## Description
 
 This is a [fugitive.vim](https://github.com/tpope/vim-fugitive) extension for
 Phabricator.
